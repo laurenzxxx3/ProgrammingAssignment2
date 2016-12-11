@@ -3,15 +3,15 @@
 
 ## Returns a list of functions which act on cached x and inv variables
 makeCacheMatrix <- function(x = matrix()) {
-	inv <- NULL
-	set <- function(y) {
-		  x <<- y
-          inv <<- NULL
-  }
-  get <- function() x
-  setInverse <- function(inverse) inv <<- inverse
-  getInverse <- function() inv
-  list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
+    inv <- NULL
+    set <- function(y) {
+        x <<- y
+        inv <<- NULL
+    }
+    get <- function() x
+    setInverse <- function(inverse) inv <<- inverse
+    getInverse <- function() inv
+    list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 }
 
 ## Calculates the inverse of CacheMatrix x or retrieves it from cache if previously calculated
